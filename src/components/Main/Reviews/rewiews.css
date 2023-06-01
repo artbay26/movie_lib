@@ -33,41 +33,6 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "HelveticaNeueCyr", sans-serif;
-  src: url("../fonts/helveticaneuecyr-ultralight200.otf") format("otf");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "HelveticaNeueCyr", sans-serif;
-  src: url("../fonts/helveticaneuecyr-light300.otf") format("otf");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "HelveticaNeueCyr", sans-serif;
-  src: url("../fonts/helveticaneuecyr-roman400.otf") format("otf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "HelveticaNeueCyr", sans-serif;
-  src: url("../fonts/helveticaneuecyr-bold700.otf") format("otf");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "HelveticaNeueCyr", sans-serif;
-  src: url("../fonts/Quicksand_Bold.otf") format("otf");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 .reviews__container {
   display: flex;
   flex-direction: column;
@@ -85,10 +50,11 @@
 .reviews__averageRating {
   font-size: 32px;
   font-weight: 700;
+  color: black;
 }
 .reviews__averageRating span {
-  color: #FFBC0B;
-  font-size: 24px;
+  color: #00CADF;
+  font-size: 20px;
 }
 .reviews__wrapper {
   display: flex;
@@ -130,6 +96,13 @@
   border: 1px solid #00CADF;
   transition: 500ms;
 }
+.form textarea::-moz-placeholder, .form input::-moz-placeholder {
+  color: rgba(128, 128, 128, 0.665);
+}
+.form textarea::placeholder,
+.form input::placeholder {
+  color: rgba(128, 128, 128, 0.665);
+}
 .form__userRating {
   font-size: 16px;
   line-height: 1.5;
@@ -163,7 +136,7 @@
 }
 
 .reviews__userObjectReview {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 700;
   color: black;
 }
@@ -174,122 +147,71 @@
 }
 .reviews__userRating {
   font-size: 16px;
-  font-weight: 700;
+}
+.reviews__userRating span {
+  color: rgba(128, 128, 128, 0.665);
+  font-size: 12px;
 }
 .reviews__userText {
   font-size: 16px;
   font-weight: 400;
-  margin: 10px 0px 10px 0;
+  margin: 10px 0 10px 0;
 }
 .reviews__userDate {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 25px;
+  color: rgba(128, 128, 128, 0.665);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-}
-
-a,
-a:hover,
-a:visited {
-  text-decoration: none;
-}
-
-ol,
-ul,
-li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-  max-width: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: inherit;
-  font-size: inherit;
-}
-
-input,
-button,
-textarea {
-  font-family: inherit;
-}
-
-.button {
-  cursor: pointer;
-}
-
-#app {
-  height: 100%;
-}
-
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  font-family: "HelveticaNeueCyr", sans-serif;
-  width: 100%;
-  font-size: 14px;
-  color: #23496d;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-}
-
-body_lock {
-  overflow: hidden;
-  touch-action: none;
-}
-
-.wrapper {
-  min-height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  row-gap: 75px;
-}
-
-.main {
-  flex: 1 1 auto;
-  padding-top: 80px;
-}
-
-[class*=_container] {
-  max-width: 1400px;
-  margin: 0px auto;
-  padding: 10px;
-  display: flex;
-}
-
-[className*=__link] {
-  cursor: pointer;
-  color: white;
-}
-
-[class*=__link]:hover {
-  transition: 500ms;
-  color: #00CADF;
-}
-
-.active {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}/*# sourceMappingURL=index.css.map */
+@media all and (max-width: 768px) {
+  .reviews__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: top;
+    row-gap: 32px;
+    -moz-column-gap: 3%;
+         column-gap: 3%;
+  }
+  .form__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    -moz-column-gap: 3%;
+         column-gap: 3%;
+  }
+  .form__titleCall {
+    text-align: center;
+  }
+  .form__objectReview, .form__userName, .form__userText {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border: 1px solid #282c34;
+    outline: none;
+  }
+  .form__objectReview:hover, .form__userName:hover, .form__userText:hover {
+    border: 1px solid #00CADF;
+    transition: 500ms;
+  }
+  .form textarea::-moz-placeholder, .form input::-moz-placeholder {
+    color: rgba(128, 128, 128, 0.665);
+  }
+  .form textarea::placeholder,
+  .form input::placeholder {
+    color: rgba(128, 128, 128, 0.665);
+  }
+  .form__userRating {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  .form__userText {
+    width: 100%;
+    height: 100px;
+    resize: none;
+  }
+}/*# sourceMappingURL=rewiews.css.map */

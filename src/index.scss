@@ -1,0 +1,112 @@
+@import './styles/fonts';
+@import './styles/variables';
+@import './styles/mixins';
+@import './components/Main/Reviews/rewiews.scss';
+@import './components/Main/Main.scss';
+@import './components/Footer/Footer.scss';
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:visited {
+    text-decoration: none;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+    max-width: 100%
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+.button {
+    cursor: pointer;
+}
+
+#app {
+    height: 100%;
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    font-family: 'HelveticaNeueCyr', sans-serif;
+    width: 100%;
+    font-size: 14px;
+    color: $tx-color;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+body_lock {
+    overflow: hidden;
+    touch-action: none;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    row-gap: 75px;
+}
+
+.main {
+    flex: 1 1 auto;
+    padding-top: 80px;
+}
+
+[class*="_container"] {
+    max-width: 1400px;
+    margin: 0px auto;
+    padding: 10px;
+    display: flex;
+}
+
+[className*="__link"] {
+    cursor: pointer;
+    color: white;
+}
+
+[class*="__link"]:hover {
+    transition: 500ms;
+    color: $blue;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}

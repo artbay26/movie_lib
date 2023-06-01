@@ -1,0 +1,21 @@
+@mixin flex($fd: null, $jc:null, $ai:null, $rg:null, $cg:null) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    row-gap: $rg;
+    column-gap: $cg;
+}
+
+@mixin btn($fs: null, $lh: null, $pd: null null, $bg: null, $col: null, $br: null, ) {
+    font-size: $fs;
+    line-height: $lh;
+    padding: $pd;
+    background: $blue;
+    color: white;
+    border-radius: $br;
+    &:hover {
+        cursor: pointer;
+        background-color: $bg-color;
+    }
+}
