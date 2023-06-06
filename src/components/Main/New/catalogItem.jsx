@@ -23,7 +23,7 @@ const CatalogItem = (props) => {
                 <div className="movie__release">Release date: {props.movie.release_date}</div>
                 <div className="movie__rateVote">
                     <div className="movie__rate"><span><FontAwesomeIcon icon={faStar}/></span> {props.movie.vote_average}</div>
-                    <div className="movie__vouteCount">Voute count: {props.movie.vote_count}</div>
+                    <div className="movie__vouteCount">Vote count: {props.movie.vote_count}</div>
                 </div>
             </div>
         </div>

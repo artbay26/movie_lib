@@ -25,7 +25,7 @@ const Header = () => {
                                     <NavLink to="/newCatalog" className="menu__link">NEW</NavLink>
                                 </li>
                                 <li className="menu__item">
-                                    <NavLink to="/favorit" className="menu__link">MY FAVORIT</NavLink>                               
+                                    <NavLink to="/favorit" className="menu__link">MY FAVORITE</NavLink>                               
                                 </li>
                             </ul>
                         </div>

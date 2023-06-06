@@ -14,12 +14,12 @@ const MovieDiscription = (props) =>{
                 <div className="movieCard__arrowPrevious" onClick={backPrevious}><FontAwesomeIcon icon={faArrowLeft}/></div>
                 <div className="movieCard__discrip discrip">
                     <h1 className="discrip__title">{props.movie.title}</h1>
-                    <div className="discrip__genre">{props.movie.genre_ids ? props.movie.genre_ids[0] : ''}</div>
+                    <div className="discrip__genre">{props.movie ? props.movie.genre_ids[0] : ''}</div>
                     <div className="discrip__seeRateVote">
                         <div className="discrip__release">Release date: {props.movie.release_date}</div>
                         <div className="discrip__rateVote">
                             <div className="discrip__rate"><span><FontAwesomeIcon icon={faStar}/> </span> {props.movie.vote_average}</div>
-                            <div className="discrip__vouteCount">Voute count: {props.movie.vote_count}</div>
+                            <div className="discrip__vouteCount">Vote count: {props.movie.vote_count}</div>
                         </div>
                         <div className="discrip__lang">Original language: {props.movie.original_language}</div>
                     </div>
