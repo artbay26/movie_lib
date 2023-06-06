@@ -1,0 +1,85 @@
+@import'../../styles/fonts';
+@import'../../styles/mixins';
+@import'../../styles/variables';
+.header__bottomWrapper {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 0 10px;
+    &::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        top: 70px;
+        left: 0;
+        height: 75px;
+        background-color: white;
+        z-index: -1;
+    }
+}
+
+.header__bottom {
+    @include flex (row, space-between, center, 15px, 3%);
+    height: 70px;
+}
+
+.header__genres {
+    flex: 0 1 70%;
+}
+
+.header__search {
+    width: 150px;
+    height: 32px;
+    align-self: center;
+    flex: 0 1 25%;
+}
+
+.header__formH {
+    @include flex (row, space-between, center, 10px, 3%);
+    border: 1px solid $tx-color;
+    border-radius: 5px;
+}
+
+.genres {}
+
+.genres {
+    &__list {
+        @include flex (row, space-between, center, 10px, 3%);
+        flex-wrap: wrap;
+    }
+    &__item {
+        font-size: 16px;
+        &:hover {
+            cursor: pointer;
+            color: $blue
+        }
+    }
+}
+
+.formH {
+    &__wrapperInput {}
+    &__inputContainer {
+        @include flex (row, space-between, center, 10px, 3%);
+        padding: 0 10px 0 0;
+        width: 100%;
+    }
+    &__inputGlass {}
+    &__input {
+        width: 100%;
+        outline: none;
+    }
+    &__inputReset {
+        font-size: 16px;
+        color: $tx-color;
+        &:hover {
+            cursor: pointer;
+            color: $blue;
+        }
+    }
+    &__btn {
+        @include btn (16px, 1, 10px 16px, $blue, white, 5px)
+    }
+}

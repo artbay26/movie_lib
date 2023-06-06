@@ -27,7 +27,7 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "HelveticaNeueCyr", sans-serif;
+  font-family: "Quicksand", sans-serif;
   src: url("../fonts/Quicksand_Bold.otf") format("otf");
   font-weight: 700;
   font-style: normal;
@@ -41,11 +41,11 @@
   row-gap: 35px;
   -moz-column-gap: 5%;
        column-gap: 5%;
-  margin-top: 75px;
 }
 .reviews__title {
   font-size: 32px;
   font-weight: 700;
+  margin-top: 75px;
 }
 .reviews__averageRating {
   font-size: 32px;
@@ -82,7 +82,7 @@
   padding: 10px;
   background-color: #282c34;
   color: #00CADF;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .form__objectReview, .form__userName, .form__userText {
   font-size: 16px;
@@ -130,9 +130,10 @@
   background-color: #282c34;
 }
 .form span {
-  color: red;
-  font-size: 19px;
+  color: #00CADF;
+  font-size: 15px;
   line-height: 1;
+  padding: 0;
 }
 
 .reviews__userObjectReview {

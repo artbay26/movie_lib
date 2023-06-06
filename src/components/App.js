@@ -1,13 +1,20 @@
 import './App.scss';
+import Header from "./Header/Header";
+import HeaderBottom from "./Header/HeaderBottom";
 import Main from './Main/Main';
+//import {useDispatch, useSelector} from "react-redux";
+//import {setReviews} from "../../../data/reducers/reviewsReducer";
 //import Footer from './Footer/Footer';
 //import Header from './Header/Header';
 //import {Route, Routes} from "react-router-dom";
-function App(props) {
-  return (
+function App() {
+   
+    return (
     <div className="App">
         <div className="wrapper">
-            <Main reviewsState={props.state} dispatch={props.dispatch}/>
+            <Header/>
+            <HeaderBottom/>
+            <Main/>
            {/* <Header/>            
             <Footer/>
             <Routes>

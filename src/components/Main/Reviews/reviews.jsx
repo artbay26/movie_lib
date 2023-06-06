@@ -3,66 +3,70 @@ import { Rating } from 'react-simple-star-rating';
 import ReviewsItem from './reviewsItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faStar} from '@fortawesome/free-solid-svg-icons';
+import {useDispatch, useSelector} from "react-redux";
+import {addReview} from "../../../data/reducers/reviewsReducer";
+import {faArrowLeft} from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from "react-router-dom";
 let commentId = 8;
 let object = '';
 let user = '';
 let rating = '';
 let text = '';
-let objectElement = React.createRef();
-let userElement = React.createRef();
-let textElement = React.createRef();
 
-const Reviews = (props) => {
-    let ReviewsList = props.reviewsPage.reviews.map(review =>
-        <ReviewsItem 
-            id={review.id} 
-            object={review.object} 
-            user={review.user} 
-            rating={review.rating} 
-            date={review.date} 
-            text={review.text}
-        />)
 
+const Reviews = () => {
+    let objectElement = React.createRef();
+    let userElement = React.createRef();
+    let textElement = React.createRef();
+    let reviewsSet = useSelector(state => state.reviewsSt.reviews);
+    let dispatch = useDispatch();
     const [ratingInitialValue, setRating] = useState(0);
-
-    let addReview = () => { 
+    let addReviewOnClick = () => { 
         let nowDateTime = new Date().toISOString(); 
         let nowDate = nowDateTime.split('T')[0];
-            props.dispatch({
-                type: 'REVIEW_ADDED',
-                review: {
-                    id: commentId++, 
-                    object: object, 
-                    user: user, 
-                    rating: rating, 
-                    date: nowDate, 
-                    text: text
-                } 
-            });
-            objectElement.current.value = '';
-            userElement.current.value = '';
-            textElement.current.value = '';
-            setRating(0);
+        dispatch(addReview({
+            id: commentId++, 
+            object: object, 
+            user: user, 
+            rating: rating, 
+            date: nowDate, 
+            text: text 
+        }));
+
+        objectElement.current.value = '';
+        userElement.current.value = '';
+        textElement.current.value = '';
+        setRating(0);
     } 
+
     let onChangeObject = () => {
         object = objectElement.current.value;        
     }
+
     let onChangeUser = () => {
         user = userElement.current.value;        
     }
+
     let onChangeText = () => {
         text = textElement.current.value;        
     }
-    const handleRating = (rate: number) => {
+
+    const handleRating = (rate) => {
         setRating(rate);
         rating = rate;        
     }
     const onPointerEnter = () => console.log('Enter')
     const onPointerLeave = () => console.log('Leave')
-    const onPointerMove = (value: number, index: number) => console.log(value, index)
+    const onPointerMove = (value, index) => console.log(value, index)
+    const navigate = useNavigate();
+        const backMovieCard = () => {
+            navigate(`/movies/:movie_id`);
+        }
+
     return(
         <div className="main__reviews reviews">
             <div className="reviews__container">
+                <div className="reviews__arrowPrevious" onClick={backMovieCard}><FontAwesomeIcon icon={faArrowLeft}/></div>
                 <h1 className="reviews__title">Customer Reviews</h1>
                 <div className="reviews__averageRating"><span><FontAwesomeIcon icon={faStar}/></span> 4.5</div>
                 <div className="reviews__wrapper">
@@ -108,16 +112,16 @@ const Reviews = (props) => {
                                 onChange={onChangeText}                           
                                 >
                             </textarea>
-                            <input 
+                            <button
                                 className="form__button button"
-                                type="button" 
-                                value="submit"                                
-                                onClick={addReview}
-                            />
+                                type="submit" 
+                                onClick={addReviewOnClick}>
+                                    Submit
+                            </button> 
                         </div>
                     </form>
                     <div className="reviews__list">
-                        {ReviewsList}
+                        {reviewsSet.map(review => <ReviewsItem review={review}/>)}
                     </div>
                 </div>
             </div>

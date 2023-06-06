@@ -7,17 +7,29 @@
 
 .reviews {
     &__container {
-        @include flex (column, center, center, 35px, 5%);
-        margin-top: 75px;
+        @include flex (column, center, center, 0px, 5%);
+        padding: 0 10px;
+    }
+    &__arrowPrevious {
+        margin-top: 95px;
+        font-size: 16px;
+        color: $grey-movie;
+        align-self: start;
+        &:hover {
+            cursor: pointer;
+            color: $blue;
+        }
     }
     &__title {
         font-size: 32px;
         font-weight: 700;
+        margin-bottom: 35px;
     }
     &__averageRating {
         font-size: 32px;
         font-weight: 700;
         color: black;
+        margin-bottom: 35px;
         span {
             color: $blue;
             font-size: 20px;
@@ -43,7 +55,7 @@
         padding: 10px;
         background-color: $bg-color;
         color: $blue;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
     }
     &__objectReview,
     &__userName,
@@ -81,9 +93,10 @@
         margin-top: 10px;
     }
     span {
-        color: red;
-        font-size: 19px;
+        color: $blue;
+        font-size: 15px;
         line-height: 1;
+        padding: 0;
     }
 }
 

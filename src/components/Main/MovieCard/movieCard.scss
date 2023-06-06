@@ -1,0 +1,109 @@
+@import'../../../styles/fonts';
+@import'../../../styles/mixins';
+@import'../../../styles/variables';
+.main {
+    &__movieCard {
+        margin-top: 70px;
+    }
+}
+
+.movieCard__container {
+    color: white;
+}
+
+.movieCard__holder {}
+
+.movieCard__arrowPrevious {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: $grey-movie;
+    &:hover {
+        cursor: pointer;
+        color: $blue;
+    }
+}
+
+.movieCard__wrapp {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+}
+
+.movieCard__discrip {
+    max-width: 30%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    max-height: 90%;
+    border-radius: 15px;
+}
+
+.discrip {
+    &__title {
+        font-size: 24px;
+        font-weight: 700px;
+        margin-bottom: 20px;
+    }
+    &__genre {
+        display: none;
+    }
+    &__seeRateVote {
+        color: $grey-movie;
+        &:hover {
+            color: white;
+        }
+    }
+    &__release {}
+    &__rateVote {
+        span {
+            color: $blue;
+        }
+    }
+    &__rate {}
+    &__vouteCount {}
+    &__lang {
+        margin-bottom: 20px;
+    }
+    &__overview {
+        font-family: 'HelveticaNeueCyr', sans-serif;
+        font-weight: 200;
+        color: rgba(255, 255, 255, 0.8);
+        span {
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+    &__heartReview {
+        display: flex;
+        @include flex (row, space-between, center, 20px, 3%);
+        margin-top: 20px;
+    }
+    &__heart {
+        font-size: 18px;
+        &:hover {
+            cursor: pointer;
+            color: $blue;
+        }
+    }
+    &__reviews {
+        @include btn (14px, 1, 8px 24px, $btn, white, 5px);
+    }
+}
+
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
