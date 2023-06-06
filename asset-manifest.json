@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/movie_lib/static/css/main.4b3a0878.css",
+    "main.js": "/movie_lib/static/js/main.f2919145.js",
+    "static/media/Quicksand_Bold.otf": "/movie_lib/static/media/Quicksand_Bold.90bf44d43965116d771b.otf",
+    "static/media/helveticaneuecyr-bold700.otf": "/movie_lib/static/media/helveticaneuecyr-bold700.cb5ad8328d40f792f2fa.otf",
+    "static/media/helveticaneuecyr-light300.otf": "/movie_lib/static/media/helveticaneuecyr-light300.44ebfa09987841241499.otf",
+    "static/media/helveticaneuecyr-roman400.otf": "/movie_lib/static/media/helveticaneuecyr-roman400.84fb498ef9ef3d096f71.otf",
+    "static/media/helveticaneuecyr-ultralight200.otf": "/movie_lib/static/media/helveticaneuecyr-ultralight200.ee85bd92152d792a8ec7.otf",
+    "index.html": "/movie_lib/index.html",
+    "main.4b3a0878.css.map": "/movie_lib/static/css/main.4b3a0878.css.map",
+    "main.f2919145.js.map": "/movie_lib/static/js/main.f2919145.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b3a0878.css",
+    "static/js/main.f2919145.js"
+  ]
+}
