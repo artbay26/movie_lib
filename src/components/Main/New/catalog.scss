@@ -108,6 +108,10 @@
     }
     &__tittle {}
     &__heart {
+        position: absolute;
+        bottom: 344px;
+    }
+    &____iconFaHeart {
         &:hover {
             cursor: pointer;
             color: $blue;
@@ -131,5 +135,11 @@
     &__vouteCount {
         font-size: 14px;
         line-height: calc(20/16);
+    }
+    .heartBlue {
+        color: $blue;
+    }
+    .heartWhite {
+        color: white;
     }
 }

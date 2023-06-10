@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "HelveticaNeueCyr", sans-serif;
+  src: url("../fonts/helveticaneuecyr-ultralight200.otf") format("otf");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr", sans-serif;
+  src: url("../fonts/helveticaneuecyr-light300.otf") format("otf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr", sans-serif;
+  src: url("../fonts/helveticaneuecyr-roman400.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr", sans-serif;
+  src: url("../fonts/helveticaneuecyr-bold700.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand", sans-serif;
+  src: url("../fonts/Quicksand_Bold.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.slider {
+  /* &__titleBox {
+      @include flex (column, null, start, 24px, 0);
+      flex: 1 0 50%;
+      padding: 16px;
+  }
+  &__title {
+      font-size: 52px;
+      font-weight: 400;
+      line-height: calc(78/52);
+      span {
+          font-weight: 700;
+      }
+      &__txt {}
+      &__btn {
+          @include btn (14px, 1, 8px 24px, $btn, white, 5px);
+      }
+      &__imgBox {}
+  }*/
+}
+.slider__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 0;
+  -moz-column-gap: 0;
+       column-gap: 0;
+}/*# sourceMappingURL=Home.css.map */

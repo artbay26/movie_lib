@@ -2,12 +2,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faStar} from '@fortawesome/free-solid-svg-icons';
 import {faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 import {faHeart} from '@fortawesome/free-solid-svg-icons';
-import { NavLink, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 
 const MovieDiscription = (props) =>{
     const navigate = useNavigate();
         const backPrevious = () => {
-            navigate(`/newCatalog`);
+            navigate(`/movie_lib/newCatalog`);
+        }
+        const ShowReviews = (id) => {
+            navigate(`/movie_lib/movies/${id}/reviews`)
         }
     return (
             <div className="movieCard__wrapp" key={props.movie.id}>
@@ -26,7 +29,7 @@ const MovieDiscription = (props) =>{
                     <p className="discrip__overview"> <span>Overview:</span> {props.movie.overview}</p>
                     <div className="discrip__heartReview">
                         <div className="discrip__heart"><FontAwesomeIcon icon={faHeart}/></div>
-                        <NavLink to="/reviewForm"><batton className="discrip__reviews">Read all reviews</batton></NavLink>
+                        <div className="discrip__reviews" onClick={()=>{ShowReviews(props.movie.id)}}>Read all reviews</div>
                     </div>
                 </div>
                 <div className="movieCard__image image _ibg">

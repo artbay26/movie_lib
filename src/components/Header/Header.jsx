@@ -12,7 +12,7 @@ const Header = () => {
         <header className="header">
             <div className="header__container _container">
                 <div className="header__top">
-                    <NavLink to="/" className="header__logo">
+                    <NavLink to="/movie_lib" className="header__logo">
                         <span><FontAwesomeIcon icon={faClapperboard}/></span> bay
                     </NavLink>
                     <nav className="header__menu menu">
@@ -22,10 +22,10 @@ const Header = () => {
                                     <NavLink to="/top20" className="menu__link">TOP-20</NavLink>
                                 </li>
                                 <li className="menu__item">
-                                    <NavLink to="/newCatalog" className="menu__link">NEW</NavLink>
+                                    <NavLink to="/movie_lib/newCatalog" className="menu__link">NEW</NavLink>
                                 </li>
                                 <li className="menu__item">
-                                    <NavLink to="/favorit" className="menu__link">MY FAVORITE</NavLink>                               
+                                    <NavLink to="/movie_lib/favorite" className="menu__link">MY FAVORITE</NavLink>                               
                                 </li>
                             </ul>
                         </div>

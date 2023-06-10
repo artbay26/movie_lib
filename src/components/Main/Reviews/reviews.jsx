@@ -7,6 +7,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {addReview} from "../../../data/reducers/reviewsReducer";
 import {faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from "react-router-dom";
+import {useParams} from "react-router-dom";
+
 let commentId = 8;
 let object = '';
 let user = '';
@@ -14,7 +16,7 @@ let rating = '';
 let text = '';
 
 
-const Reviews = () => {
+const Reviews = (props) => {
     let objectElement = React.createRef();
     let userElement = React.createRef();
     let textElement = React.createRef();
@@ -59,16 +61,25 @@ const Reviews = () => {
     const onPointerLeave = () => console.log('Leave')
     const onPointerMove = (value, index) => console.log(value, index)
     const navigate = useNavigate();
-        const backMovieCard = () => {
-            navigate(`/movies/:movie_id`);
-        }
+    const backMovieCard = (id) => {
+        navigate(`/movie_lib/movies/${id}/movieCard`);
+    }
+
+    let movies = useSelector(state => state.catalogSt.movieList);   
+    let params = useParams();
+    let movieArr = movies.filter(m => m.id === +params.movie_id)
+    let movie = movieArr && movieArr.length > 0 ? movieArr[0] : {};    
+
+    
+
 
     return(
-        <div className="main__reviews reviews">
+        <div className="main__reviews reviews" key={movie.id}>
             <div className="reviews__container">
-                <div className="reviews__arrowPrevious" onClick={backMovieCard}><FontAwesomeIcon icon={faArrowLeft}/></div>
+            <div className="reviews__arrowPrevious" onClick={backMovieCard}><FontAwesomeIcon icon={faArrowLeft}/></div>
+                <div className="reviews__poster">{movie.title}</div>
                 <h1 className="reviews__title">Customer Reviews</h1>
-                <div className="reviews__averageRating"><span><FontAwesomeIcon icon={faStar}/></span> 4.5</div>
+                <div className="reviews__averageRating"><span><FontAwesomeIcon icon={faStar}/></span>{props.movie.vote_average}</div>
                 <div className="reviews__wrapper">
                     <form className="reviews__form form">
                         <div className="form__wrapper">

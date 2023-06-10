@@ -14,11 +14,11 @@ const Catalog = () => {
             <div className="catalog__container">
                 <div className="catalog__titleFilter">
                     <div className="catalog__homeTitle">
-                        <NavLink to="/" className="catalog__home"><FontAwesomeIcon icon={faHouse}/></NavLink>
+                        <NavLink to="/movie_lib" className="catalog__home"><FontAwesomeIcon icon={faHouse}/></NavLink>
                         <h1 className="catalog__title">New</h1>
                     </div>
                     <div className="catalog__filter">
-                        <batton type="batton" className="catalog__filterBtn">Filter</batton>
+                        <batton type="batton" className="Catalog__filterBtn">Filter</batton>
                         <div className="catalog__filterList filterList ">
                             <div className="filterList__item">Date</div>
                             <div className="filterList__item">Rating</div>

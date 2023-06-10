@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "HelveticaNeueCyr", sans-serif;
+  src: url("../fonts/helveticaneuecyr-ultralight200.otf") format("otf");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr", sans-serif;
+  src: url("../fonts/helveticaneuecyr-light300.otf") format("otf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr", sans-serif;
+  src: url("../fonts/helveticaneuecyr-roman400.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr", sans-serif;
+  src: url("../fonts/helveticaneuecyr-bold700.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand", sans-serif;
+  src: url("../fonts/Quicksand_Bold.otf") format("otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.main__movieCard {
+  margin-top: 70px;
+}
+
+.movieCard__container {
+  color: white;
+}
+
+.movieCard__arrowPrevious {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: rgba(128, 128, 128, 0.665);
+}
+.movieCard__arrowPrevious:hover {
+  cursor: pointer;
+  color: #00CADF;
+}
+
+.movieCard__wrapp {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+}
+
+.movieCard__discrip {
+  max-width: 30%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  max-height: 90%;
+  border-radius: 15px;
+}
+
+.discrip__title {
+  font-size: 24px;
+  font-weight: 700px;
+  margin-bottom: 20px;
+}
+.discrip__genre {
+  display: none;
+}
+.discrip__seeRateVote {
+  color: rgba(128, 128, 128, 0.665);
+}
+.discrip__seeRateVote:hover {
+  color: white;
+}
+.discrip__rateVote span {
+  color: #00CADF;
+}
+.discrip__lang {
+  margin-bottom: 20px;
+}
+.discrip__overview {
+  font-family: "HelveticaNeueCyr", sans-serif;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.8);
+}
+.discrip__overview span {
+  font-size: 16px;
+  font-weight: 700;
+}
+.discrip__heartReview {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 20px;
+  -moz-column-gap: 3%;
+       column-gap: 3%;
+  margin-top: 20px;
+}
+.discrip__heart {
+  font-size: 18px;
+}
+.discrip__heart:hover {
+  cursor: pointer;
+  color: #00CADF;
+}
+.discrip__reviews {
+  font-size: 14px;
+  line-height: 1;
+  padding: 8px 24px;
+  background: #00CADF;
+  color: white;
+  border-radius: 5px;
+}
+.discrip__reviews:hover {
+  cursor: pointer;
+  background-color: #282c34;
+}
+
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}/*# sourceMappingURL=movieCard.css.map */

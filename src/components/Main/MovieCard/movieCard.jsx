@@ -1,9 +1,8 @@
-import axios from 'axios';
 import "./movieCard.scss";
 import {useSelector} from "react-redux";
-//import GetMovies from '../../../api/api';
 import MovieDiscription from "./movieDiscription";
 import {useParams} from "react-router-dom";
+import  Reviews from "../Reviews/reviews"
 
 
 const MovieCard = () => {
@@ -16,7 +15,8 @@ const MovieCard = () => {
         <div className="main__movieCard movieCard">
             <div className="movieCard__container">
                 <div className="movieCard__holder">
-                    <MovieDiscription movie = {movie} />
+                   <MovieDiscription movie = {movie} />
+                    <Reviews movie = {movie}/>
                 </div>
             </div>
         </div>

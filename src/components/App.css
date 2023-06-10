@@ -1,1 +1,50 @@
-/*# sourceMappingURL=App.css.map */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: black !important;
+  background-color: #fff;
+  padding: 10px 23px !important;
+  border-radius: 50px;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 25px !important;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: lemonchiffon;
+  color: #fff;
+}
+
+@media all and (max-width: 320px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 16px !important;
+  }
+}/*# sourceMappingURL=App.css.map */
